@@ -23,6 +23,18 @@
       object-fit: cover;
     }
 
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #212529 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
     .carousel-content {
       position: absolute;
       top: 40%;
@@ -32,6 +44,7 @@
       color: #fff;
       text-align: left;
       max-width: 500px;
+      z-index: 2;
 
       h2 {
         font-size: 2rem;
@@ -68,6 +81,7 @@
     transform: translateX(-50%);
     display: flex;
     gap: 0.5rem;
+    z-index: 2;
   }
 
   .indicator {
@@ -80,6 +94,7 @@
 
     &.active {
       background-color: #FFC107;
+      margin-bottom: 40px;
     }
   }
 }

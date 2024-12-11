@@ -1,0 +1,15 @@
+.about-us {
+  background-color: #414548;
+  margin: 2rem;
+  color: white;
+  border-radius: 1rem;
+}
+
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.mark-color {
+  color: #FFC107;
+}
