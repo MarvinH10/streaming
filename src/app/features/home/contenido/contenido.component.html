@@ -10,12 +10,41 @@
         <span class="year-tag">{{ movie.year }}</span>
       </div>
       <div class="movie-details">
-        <h3>{{ movie.title }}</h3>
-        <p class="description">{{ movie.description }}</p>
-        <p><span>Director:</span> {{ movie.director }}</p>
-        <p><span>Género:</span> {{ movie.genre.join(', ') }}</p>
-        <button class="btn-watch-now">Mira ahora</button>
+        <div class="full-details">
+          <h3>{{ movie.title }}</h3>
+          <p class="description">{{ movie.description }}</p>
+          <p><span>Director:</span> {{ movie.director }}</p>
+          <p><span>Género:</span> {{ movie.genre.join(', ') }}</p>
+          <button class="btn-watch-now">
+            <fa-icon class="icon-style" [icon]="'play'"></fa-icon>
+            Mira ahora
+          </button>
+        </div>
+
+        <div class="icon-only">
+          <fa-icon class="icon-style" [icon]="'play'"></fa-icon>
+        </div>
       </div>
     </div>
   </main>
+
+  <div class="aside-container">
+    <aside class="aside1">
+      <h3>Buscar</h3>
+      <form role="search" method="get" action="https://cinetux.top/">
+        <label for="search-input-1">Buscar:</label>
+        <input id="search-input-1" type="search" name="s" required />
+        <button type="submit">Buscar</button>
+      </form>
+    </aside>
+    <aside class="aside2">
+      <h3>Categorías</h3>
+      <ul>
+        <li><a href="#">Acción</a></li>
+        <li><a href="#">Drama</a></li>
+        <li><a href="#">Comedia</a></li>
+        <li><a href="#">Terror</a></li>
+      </ul>
+    </aside>
+  </div>
 </div>
