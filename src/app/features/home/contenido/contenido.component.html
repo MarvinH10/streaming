@@ -1,0 +1,21 @@
+<div class="container">
+  <header>
+    <h2>Películas en Línea</h2>
+  </header>
+
+  <main class="movies-grid">
+    <div class="movie-card" *ngFor="let movie of movies">
+      <div class="image-wrapper">
+        <img [src]="movie.image" [alt]="movie.title" />
+        <span class="year-tag">{{ movie.year }}</span>
+      </div>
+      <div class="movie-details">
+        <h3>{{ movie.title }}</h3>
+        <p class="description">{{ movie.description }}</p>
+        <p><span>Director:</span> {{ movie.director }}</p>
+        <p><span>Género:</span> {{ movie.genre.join(', ') }}</p>
+        <button class="btn-watch-now">Mira ahora</button>
+      </div>
+    </div>
+  </main>
+</div>

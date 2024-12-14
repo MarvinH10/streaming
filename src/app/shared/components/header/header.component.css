@@ -1,7 +1,13 @@
 header {
-  background-color: #212529;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(37, 40, 43, 0.452);
   color: #fff;
   padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.719);
+  backdrop-filter: blur(5px);
 }
 
 nav {
@@ -18,6 +24,10 @@ nav .logo {
   margin: 0;
   color: #FFC107;
   cursor: pointer;
+}
+
+nav .logo:hover {
+  color: #fff;
 }
 
 nav ul {
@@ -41,4 +51,5 @@ nav a {
 
 nav a:hover {
   text-decoration: none;
+  color: #FFC107;
 }
